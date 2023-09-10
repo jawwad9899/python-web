@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Roboto";
+      }
+      body {
+        background-color: #575555;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10rem;
+      }
+      form {
+        width: 50%;
+      }
+      input {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+      }
+      input,
+      button {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.7em;
+        border: none;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+        outline: none;
+      }
+      button {
+        background-color: #2d3436;
+        color: white;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        cursor: pointer;
+      }
+      @media (max-width:700px){
+        form {
+        width: 75%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/" method="POST">
+      <input autocomplete="off" spellcheck="false" autocapitalize="none" type="text" placeholder="Type your URL" name="url" />
+      <button type="submit">Short it</button>
+    </form>
+    <br />
+    <a href="{{url}}" target="_blank">{{url}}</a>
+  </body>
+</html>
